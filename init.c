@@ -330,7 +330,7 @@ Stream_t *fs_init(char drive, int mode, int *isRop)
 		fprintf(stderr, "Big disks not supported on this architecture\n");
 		exit(1);
 	}
-#endif
+
 	if(!mtools_skip_check && (tot_sectors % dev.sectors)){
 		fprintf(stderr,
 			"Total number of sectors (%d) not a multiple of"
@@ -341,6 +341,7 @@ Stream_t *fs_init(char drive, int mode, int *isRop)
 			"to skip this test\n");
 		exit(1);
 	}
+#endif
 
 	/* full cylinder buffering */
 #ifdef FULL_CYL
