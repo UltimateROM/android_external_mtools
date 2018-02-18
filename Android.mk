@@ -28,3 +28,5 @@ LOCAL_STATIC_LIBRARIES := libiconv
 LOCAL_MODULE := mtools
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
+
+include $(LOCAL_PATH)/libiconv/Android.mk
